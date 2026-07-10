@@ -1,30 +1,148 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>【徳武産業】視聴者限定特典</title> 
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<div style="text-align: center; margin-top: 30px; margin-bottom: 30px;">
-    <a href="https://tokutake-line-rich.github.io/web-data/webinar_202607.pptx" download="7月度ウェビナー参加者限定.pptx" class="download-button">
-        パワーポイント資料をダウンロード (21.8MB)
-    </a>
-</div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【徳武産業】視聴者限定特典 - 7月度ウェビナー資料ダウンロード</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* ==== 全体的な基本スタイル ==== */
+        body {
+            font-family: "Segoe UI", "メイリオ", Meiryo, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6; /* 少し優しい背景色 */
+            display: flex; /* 中央寄せのためにflexboxを使用 */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* 画面いっぱいの高さを確保 */
+        }
 
-<style>
-    .download-button {
-        display: inline-block;
-        background-color: #4CAF50; /* Green */
-        color: white;
-        padding: 12px 25px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 1.1em;
-        font-weight: bold;
-        border-radius: 8px;
-        transition: background-color 0.3s ease;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    .download-button:hover {
-        background-color: #45a049;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    }
-</style>
+        /* ==== コンテンツのコンテナ ==== */
+        .container {
+            max-width: 700px; /* 最大幅を設定 */
+            width: 90%; /* 小さい画面では幅を調整 */
+            margin: 20px auto; /* 上下の余白と中央寄せ */
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* ==== ヘッディング ==== */
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.5em; /* フォントサイズを大きく */
+            font-weight: 700;
+        }
+
+        /* ==== 説明文 ==== */
+        p.description {
+            font-size: 1.15em;
+            margin-bottom: 35px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* ==== ダウンロードボタンのラッパー ==== */
+        .download-area {
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* ==== ダウンロードボタン ==== */
+        .download-button {
+            display: inline-flex; /* アイコンとテキストを並べるためにflexboxを使用 */
+            align-items: center; /* 垂直方向の中央揃え */
+            gap: 12px; /* アイコンとテキストの間のスペース */
+            background-color: #28a745; /* より洗練されたグリーン */
+            color: white;
+            padding: 18px 35px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            border: none;
+            cursor: pointer;
+            outline: none; /* フォーカス時のアウトラインを非表示（アクセシビリティ考慮し別途スタイル推奨） */
+        }
+
+        .download-button:hover {
+            background-color: #218838; /* ホバーで少し暗く */
+            transform: translateY(-3px); /* わずかに上に浮き上がる効果 */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .download-button:active {
+            transform: translateY(0); /* クリック時に元の位置に戻る */
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            background-color: #1e7e34; /* アクティブでさらに暗く */
+        }
+
+        /* ダウンロードアイコン */
+        .download-button::before {
+            content: '⬇️'; /* 絵文字アイコンを使用 */
+            font-size: 1.4em;
+            line-height: 1; /* アイコンの縦位置調整 */
+        }
+
+        /* ==== レスポンシブデザイン ==== */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+                width: 95%;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p.description {
+                font-size: 1em;
+            }
+            .download-button {
+                font-size: 1.1em;
+                padding: 15px 25px;
+                flex-direction: column; /* 小さい画面ではアイコンとテキストを縦に並べる */
+                gap: 5px;
+            }
+            .download-button::before {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.6em;
+            }
+            .download-button {
+                font-size: 1em;
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>【徳武産業】視聴者限定特典</h1>
+        <p class="description">
+            7月度ウェビナーにご参加いただき、誠にありがとうございます。<br>
+            本ページより、ウェビナーで使用したパワーポイント資料をダウンロードいただけます。<br>
+            ぜひ今後のご参考にしてください。
+        </p>
+        <div class="download-area">
+            <a href="https://tokutake-line-rich.github.io/web-data/webinar_202607.pptx" download="7月度ウェビナー参加者限定.pptx" class="download-button">
+                パワーポイント資料をダウンロード (21.8MB)
+            </a>
+        </div>
+    </div>
+</body>
+</html>
